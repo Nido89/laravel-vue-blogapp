@@ -21,12 +21,16 @@
                     <table class="table table-striped">
                         <tr>
                             <th>Title</th>
+                            <th>Writer</th>
+                            <th>Created at</th>
                             <th>Option1</th>
                             <th>Option2</th>
                         </tr>
                         @foreach ($posts as $post)
                         <tr>
                         <td>{{$post->title}}</td>
+                        <td>{{$post->user->name}}</td>
+                        <td>{{$post->created_at}}</td>
                         <td><a href="/lsapp/public/posts/{{$post->id}}/edit" class="btn btn-warning">Edit</a></td>
                             <td>
                                 {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'DELETE','class' =>'pull-right']) !!}

@@ -11,7 +11,7 @@
         @foreach ($posts as $post)
             <div class=" mt-2 card card-body bg-dark border-warning text-white">
             <h4><a class="text-white" href="./posts/{{$post->id}}"> {{$post->title}}</a></h4>
-            <small class="text-warning">Written on {{$post->created_at}} </small><strong>by {{$post->user->name}}</strong> 
+            <small >Written on {{$post->created_at}} </small><strong class="text-warning">by {{$post->user->name}}</strong> 
             </div>
         
         @endforeach
