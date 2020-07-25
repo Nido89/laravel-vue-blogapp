@@ -4,6 +4,8 @@
 
 <div class="jumbotron mt-4 text-dark bg-light ">
     <h1 class="text-dark bg-warning ">{{$post->title}}</h1>
+    <img style="width: 100%"src="http://localhost/lsapp/storage/app/public/cover_images/{{$post->cover_image}}">
+    <hr>
     <div>
         <p class=" lead ">
         {!!$post->body!!}
